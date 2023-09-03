@@ -5,20 +5,20 @@
 class Commitify < Formula
   desc ""
   homepage ""
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cocoide/commitify/releases/download/v0.2.0/commitify_Darwin_x86_64.tar.gz"
-      sha256 "29890815668b06e1c9586c39e95113a36eec7a9de05f7700e8553ef956453d9c"
+      url "https://github.com/cocoide/commitify/releases/download/v0.3.0/commitify_Darwin_x86_64.tar.gz"
+      sha256 "3d610f6ac586f622cb58bcaf2f634cfcc6b316f24f739b93bb44c7737f888362"
 
       def install
         bin.install "commitify"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cocoide/commitify/releases/download/v0.2.0/commitify_Darwin_arm64.tar.gz"
-      sha256 "eea31d8a9c896ccdbed46d74f717d37aad7850e80899cecde2506e2c8441b56f"
+      url "https://github.com/cocoide/commitify/releases/download/v0.3.0/commitify_Darwin_arm64.tar.gz"
+      sha256 "d242ba43f3120da00e256fea9fd2dcf3630c27b6d71408587a779639bd073b2a"
 
       def install
         bin.install "commitify"
@@ -28,16 +28,16 @@ class Commitify < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cocoide/commitify/releases/download/v0.2.0/commitify_Linux_arm64.tar.gz"
-      sha256 "bca3b0cedd4735e081fdd0b4bc8836756b070c0e0a86c6c57323df2985462eb1"
+      url "https://github.com/cocoide/commitify/releases/download/v0.3.0/commitify_Linux_arm64.tar.gz"
+      sha256 "5bee90410d80ac8f99d618d47706a5d68e01df322da8f9a8d6a6b09fbe86d93c"
 
       def install
         bin.install "commitify"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cocoide/commitify/releases/download/v0.2.0/commitify_Linux_x86_64.tar.gz"
-      sha256 "9ce7ec58af7c4f2d7685905378d7c84bc0618089d88e0a022ed86c95ca1df5a4"
+      url "https://github.com/cocoide/commitify/releases/download/v0.3.0/commitify_Linux_x86_64.tar.gz"
+      sha256 "c6db46ae05270008e6a7f864fecaeb202a28211b677eeafb97002d0af8aba3e9"
 
       def install
         bin.install "commitify"
