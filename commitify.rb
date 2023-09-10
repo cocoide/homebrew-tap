@@ -5,20 +5,20 @@
 class Commitify < Formula
   desc ""
   homepage ""
-  version "0.3.0"
+  version "0.4.4"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/cocoide/commitify/releases/download/v0.3.0/commitify_Darwin_x86_64.tar.gz"
-      sha256 "3d610f6ac586f622cb58bcaf2f634cfcc6b316f24f739b93bb44c7737f888362"
+    if Hardware::CPU.arm?
+      url "https://github.com/cocoide/commitify/releases/download/v0.4.4/commitify_Darwin_arm64.tar.gz"
+      sha256 "f94c88c2c7d7628e50a62bf3cdcf628a3803a8c5e25219c339a82b668e6e7c98"
 
       def install
         bin.install "commitify"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/cocoide/commitify/releases/download/v0.3.0/commitify_Darwin_arm64.tar.gz"
-      sha256 "d242ba43f3120da00e256fea9fd2dcf3630c27b6d71408587a779639bd073b2a"
+    if Hardware::CPU.intel?
+      url "https://github.com/cocoide/commitify/releases/download/v0.4.4/commitify_Darwin_x86_64.tar.gz"
+      sha256 "5dd9e7616015edd515746534959ed07390853416ff12719625de3f4d24576904"
 
       def install
         bin.install "commitify"
@@ -28,16 +28,16 @@ class Commitify < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cocoide/commitify/releases/download/v0.3.0/commitify_Linux_arm64.tar.gz"
-      sha256 "5bee90410d80ac8f99d618d47706a5d68e01df322da8f9a8d6a6b09fbe86d93c"
+      url "https://github.com/cocoide/commitify/releases/download/v0.4.4/commitify_Linux_arm64.tar.gz"
+      sha256 "753c23a18ee1bfedc6152cea23ecceb439ff8d45392b58a08bc3744c6793f8c7"
 
       def install
         bin.install "commitify"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cocoide/commitify/releases/download/v0.3.0/commitify_Linux_x86_64.tar.gz"
-      sha256 "c6db46ae05270008e6a7f864fecaeb202a28211b677eeafb97002d0af8aba3e9"
+      url "https://github.com/cocoide/commitify/releases/download/v0.4.4/commitify_Linux_x86_64.tar.gz"
+      sha256 "938dc6cbb83114e89884d207a1a4e863d7e531e81b1891639053fc597990db90"
 
       def install
         bin.install "commitify"
